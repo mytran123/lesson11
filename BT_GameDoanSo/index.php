@@ -1,8 +1,18 @@
 <?php
 session_start();
 include_once "Game.php";
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_REQUEST["left"])) {
+        left();
+    } elseif (isset($_REQUEST["right"])) {
+        right();
+    } elseif (isset($_REQUEST["win"])) {
+        echo "You win";
+    } elseif (isset($_REQUEST["start"])) {
+        start();
+    }
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,11 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 <form method="post">
-    <h1>Số của bạn là <?php echo $_SESSION["mid"]?></h1>
+    <h3>Số của bạn là <?php echo $_SESSION['mid'];?></h3>
     <input type="submit" name="start" value="Start">
-    <input type="submit" name="higher" value="Higher">
-    <input type="submit" name="lower" value="Lower">
-    <input type="submit" name="win" value="Win">
+    <input type="submit" name="right" value="Higher">
+    <input type="submit" name="left" value="Lower">
+    <input type="submit" name="win" value="Correct">
 </form>
 </body>
 </html>
