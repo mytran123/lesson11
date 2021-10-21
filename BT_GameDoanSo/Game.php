@@ -1,9 +1,9 @@
 <?php
 function start() {
-    $_SESSION["mid"] = 50;
-    $_SESSION["left"] = 0;
-    $_SESSION["right"] = 100;
-    return $_SESSION["mid"];
+    $_SESSION['mid'] = 50;
+    $_SESSION['left'] = 0;
+    $_SESSION['right'] = 100;
+    return $_SESSION['mid'];
 }
 
 function right() {
@@ -16,10 +16,10 @@ function right() {
 }
 
 function left() {
-    $mid = $_SESSION["mid"];
-    $_SESSION["right"] = $mid - 1;
-    $low = $_SESSION["left"];
-    $high = $_SESSION["right"];
-    $_SESSION["mid"] = (int)(($low+$high)/2);
-    return $_SESSION["mid"];
+    $mid = $_SESSION['mid'];
+    $_SESSION['right'] = $mid - 1;
+    $low = $_SESSION['left'];
+    $high = $_SESSION['right'];
+    $_SESSION['mid'] = (int)(($low+$high)/2);
+    return $_SESSION['mid'];
 }
