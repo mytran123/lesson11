@@ -11,9 +11,9 @@ function countNumber($numbers,$value) {
 
 $numbers = [4, 2, 5, 7, 2, 0, 2, 8];
 
-//foreach ($numbers as $value) {
-//    echo $value . " ";
-//}
-$countNumber = countNumber($numbers, $value);
+foreach ($numbers as $value) {
+    echo $value . " ";
+}
+$countNumber = countNumber($numbers, 2);
 echo "</br>";
 echo "Number of times the number is " . $countNumber;
