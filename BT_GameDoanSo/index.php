@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (isset($_REQUEST["right"])) {
         right();
     } elseif (isset($_REQUEST["win"])) {
-        echo "You win";
+        echo "That's Right";
     } elseif (isset($_REQUEST["start"])) {
         start();
     }
